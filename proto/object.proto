@@ -1,0 +1,21 @@
+syntax="proto3";
+package grpc_samples;
+
+message Object {
+  string id = 1;
+  float x = 2;
+  float y = 3;
+  float yaw = 4;
+}
+
+message ObjectRequest {
+
+}
+message ObjectResponse {
+  Object obj = 1;
+}
+
+
+service ObjectDetection {
+  rpc GetObject(ObjectRequest) returns (ObjectResponse) {}
+}
