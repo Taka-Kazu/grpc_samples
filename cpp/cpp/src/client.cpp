@@ -30,7 +30,7 @@ int main(int argc, char** argv)
     else
     {
       std::cout << "gRPC failed" << std::endl;
-      return -1;
+      return 1;
     }
   }
   return 0;
