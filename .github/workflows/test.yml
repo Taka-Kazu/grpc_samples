@@ -1,0 +1,13 @@
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test:
+    runs_on: ubuntu-latest
+    steps:
+      - run: docker-compose build
+      - run: docker-compose up
+
